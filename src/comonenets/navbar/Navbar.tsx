@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
   const navLinkStyle = ({ isActive }: { isActive: boolean }) => {
@@ -10,7 +11,17 @@ function Navbar() {
 
   return (
     <div className="Navbar">
-      <span className="logoName">ANAS Portfolio</span>
+      <span className="logoName">
+        <img
+          src={logo}
+          alt="Anas.dev Logo"
+          style={{ height: "150px", objectFit: "contain" }}
+        />
+      </span>
+      {/* text logo if i need it */}
+      {/* <span className="logoName">
+        <span style={{ fontWeight: 700 }}>Anas</span>.dev
+      </span> */}
       <ul className="navPages">
         <li>
           <NavLink to="/" style={navLinkStyle}>
