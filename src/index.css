@@ -1,0 +1,47 @@
+* {
+  margin: o;
+  padding: 0;
+}
+body {
+  background: #eaf6fb;
+  color: #002b5b;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.Navbar {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+}
+.navPages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  gap: 40px;
+}
+.navPages li {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.navPages li:hover {
+  background-color: #9ee6fc;
+  font-weight: 400;
+}
+
+.logoName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 500;
+}
