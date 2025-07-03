@@ -29,9 +29,11 @@ function Home() {
         <HeroSection />
       </Motion>
       <Box sx={{ width: "100%", textAlign: "center" }}>
+        <Motion yValue={20}>
         <Typography variant="h4" sx={{ fontWeight: 900 }}>
           What I Do?
         </Typography>
+        </Motion>
         <Box>
           <SkillCard
             ImageSrc={FrontendDevelopment}
