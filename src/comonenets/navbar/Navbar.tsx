@@ -39,11 +39,6 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/experience" style={navLinkStyle}>
-            Experience
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/contact" style={navLinkStyle}>
             Contact
           </NavLink>

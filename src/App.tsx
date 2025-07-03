@@ -4,7 +4,6 @@ import Home from "./pages/home/Home";
 import Projects from "./pages/projects/Projects";
 import Education from "./pages/education/Education";
 import Contact from "./pages/contact/Contact";
-import Experience from "./pages/experience/Experience";
 import Motion from "./comonenets/Motion";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/education" element={<Education />} />
-        <Route path="/experience" element={<Experience />} />
       </Routes>
     </>
   );
