@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/material";
-import EducationSection from "../../comonenets/EducationSection";
+import IntroSection from "../../comonenets/IntroSection";
 import Motion from "../../comonenets/Motion";
 import DegreeCard from "../../comonenets/DegreeCard";
 import university from "../../assets/university.png";
+import EducationPhoto from "../../assets/Education.png";
 import Coat from "../../assets/Coat_of_arms_of_Palestine.png";
 import CertificationCard from "../../comonenets/CertificationCard";
 import CiscoCert from "../../assets/Cybersecurity.png";
@@ -45,7 +46,12 @@ function Education() {
     >
       <Box sx={{ maxWidth: "1200px", width: "100%", mx: "auto" }}>
         <Motion yValue={20}>
-          <EducationSection />
+          <IntroSection
+            title="Education"
+            subTitle="Basic Qualification and Certifications"
+            image={EducationPhoto}
+            isHaveImage={true}
+          />
         </Motion>
       </Box>
 
@@ -112,7 +118,7 @@ function Education() {
             flexWrap="wrap"
             gap={2}
             justifyContent="center"
-            alignItems="center" 
+            alignItems="center"
             mt={5}
             mb={5}
           >
