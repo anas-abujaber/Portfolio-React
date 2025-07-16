@@ -9,9 +9,9 @@ import {
   DialogContent,
   DialogActions,
 } from "@mui/material";
-import SocialLinks from "../../comonenets/SocialLinks";
+import SocialLinks from "../../components/SocialLinks";
 import { useState } from "react";
-import Motion from "../../comonenets/Motion";
+import Motion from "../../components/Motion";
 
 function Contact() {
   const [email, setEmail] = useState("");

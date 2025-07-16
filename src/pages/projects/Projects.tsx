@@ -1,8 +1,8 @@
 import { Box, Button } from "@mui/material";
-import IntroSection from "../../comonenets/IntroSection";
-import Motion from "../../comonenets/Motion";
+import IntroSection from "../../components/IntroSection";
+import Motion from "../../components/Motion";
 import ProjectPhoto from "../../assets/project.png";
-import CardList from "../../comonenets/CardList";
+import CardList from "../../components/CardList";
 import typeScript from "../../assets/typescript-original.svg";
 import javaScript from "../../assets/javascript.svg";
 import react from "../../assets/react-original.svg";

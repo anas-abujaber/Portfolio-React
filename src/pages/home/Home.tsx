@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import HeroSection from "../../comonenets/HeroSection";
-import Motion from "../../comonenets/Motion";
-import SkillCard from "../../comonenets/SkillCard";
+import HeroSection from "../../components/HeroSection";
+import Motion from "../../components/Motion";
+import SkillCard from "../../components/SkillCard";
 
 import FrontendDevelopment from "../../assets/FrontendDevelopment.webp";
 import UiUx from "../../assets/UI-UX-Design.png";

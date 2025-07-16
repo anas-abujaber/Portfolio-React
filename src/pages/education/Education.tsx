@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import IntroSection from "../../comonenets/IntroSection";
-import Motion from "../../comonenets/Motion";
-import DegreeCard from "../../comonenets/DegreeCard";
+import IntroSection from "../../components/IntroSection";
+import Motion from "../../components/Motion";
+import DegreeCard from "../../components/DegreeCard";
 import university from "../../assets/university.png";
 import EducationPhoto from "../../assets/Education.png";
 import Coat from "../../assets/Coat_of_arms_of_Palestine.png";
-import CertificationCard from "../../comonenets/CertificationCard";
+import CertificationCard from "../../components/CertificationCard";
 import CiscoCert from "../../assets/Cybersecurity.png";
 import uiux from "../../assets/uiux.png";
 import Vulnerability from "../../assets/Vulnerability.png";
