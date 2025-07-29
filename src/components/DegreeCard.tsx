@@ -1,15 +1,5 @@
-import {
-  Box,
-  Card,
-  Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Button,
-} from "@mui/material";
-import FlashOnIcon from "@mui/icons-material/FlashOn";
 import { motion } from "framer-motion";
+import { FaBolt } from "react-icons/fa";
 
 type DegreeCardProps = {
   logo: string;
@@ -29,102 +19,65 @@ function DegreeCard({
   website,
 }: DegreeCardProps) {
   return (
-    <Box
-      sx={{
-        mt: 4,
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        gap: 4,
-        flexWrap: "wrap",
-      }}
+    <div
+      className="
+        mt-4 flex flex-col md:flex-row justify-center items-center w-full gap-4 flex-wrap
+      "
     >
+      {/* Logo */}
       <motion.div
         initial={{ opacity: 0, rotateX: 90 }}
         whileInView={{ opacity: 1, rotateX: 0 }}
         transition={{ duration: 1 }}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100px",
-          height: "100px",
-        }}
+        className="flex justify-center items-center w-[100px] h-[100px]"
       >
         <img
           src={logo}
           alt={`${title} Logo`}
-          style={{
-            width: 100,
-            height: 100,
-            objectFit: "contain",
-            borderRadius: "50%",
-            backfaceVisibility: "hidden",
-          }}
+          className="w-[100px] h-[100px] object-contain rounded-full"
         />
       </motion.div>
 
       {/* Card Content */}
-      <Card
-        sx={{
-          p: 2,
-          flex: 1,
-          backgroundColor: "#e3f2fd",
-          minWidth: { xs: "100%", md: "0" },
-        }}
-      >
+      <div className="p-4 flex-1 bg-[#e3f2fd] min-w-full md:min-w-0 rounded-lg shadow-md">
         {/* Header */}
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{
-            backgroundColor: "#90caf9",
-            p: 2,
-            borderRadius: 1,
-            flexWrap: "wrap",
-          }}
+        <div
+          className="
+            bg-[#90caf9] p-3 rounded-md flex justify-between items-center flex-wrap
+          "
         >
-          <Typography fontWeight={800}>{title}</Typography>
-          <Typography fontWeight={600}>{date}</Typography>
-        </Box>
+          <p className="font-extrabold">{title}</p>
+          <p className="font-semibold">{date}</p>
+        </div>
 
-        <Typography variant="subtitle1" fontWeight={600} mt={2}>
-          {degree}
-        </Typography>
+        <p className="mt-2 font-semibold text-base">{degree}</p>
 
-        <List dense>
+        {/* Description List */}
+        <ul className="mt-2 space-y-1">
           {description.map((text, index) => (
-            <ListItem key={index} disablePadding>
-              <ListItemIcon sx={{ minWidth: "32px" }}>
-                <FlashOnIcon sx={{ color: "#f5b301" }} />
-              </ListItemIcon>
-              <ListItemText
-                primary={
-                  <Typography variant="body2" color="text.secondary">
-                    {text}
-                  </Typography>
-                }
-              />
-            </ListItem>
+            <li key={index} className="flex items-start gap-2">
+              <FaBolt className="text-[#f5b301] mt-1 shrink-0" />
+              <p className="text-sm text-gray-600">{text}</p>
+            </li>
           ))}
-        </List>
+        </ul>
 
-        <Box textAlign="right">
-          <Button
-            variant="contained"
+        {/* Visit Website Button */}
+        <div className="text-right mt-2">
+          <a
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ mt: 1, backgroundColor: "#90caf9", color: "black" }}
+            className="
+              inline-block mt-1 px-4 py-2 bg-[#90caf9] text-black rounded-md
+              hover:scale-105 transition-transform duration-300
+            "
           >
             Visit Website
-          </Button>
-        </Box>
-      </Card>
-    </Box>
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }
 

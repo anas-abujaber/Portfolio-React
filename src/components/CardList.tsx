@@ -1,5 +1,3 @@
-import { Box, Card, Typography } from "@mui/material";
-
 type CardListProps = {
   title: string;
   description: string;
@@ -10,63 +8,36 @@ type CardListProps = {
 
 function CardList({ title, description, date, icon, emoji }: CardListProps) {
   return (
-    <Card
-      sx={{
-        width: "400px",
-        height: "150px",
-        padding: 3,
-        boxShadow: 3,
-        overflow: "hidden",
-        display: "flex",
-        gap: "10px",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        transition: "transform 0.4s",
-        backgroundColor: "#A6E1FA",
-        "&:hover": {
-          transform: "scale(1.03)",
-        },
-        cursor:"pointer",
-      }}
+    <div
+      className="
+        w-[400px] h-[150px] p-6 shadow-md overflow-hidden 
+        flex flex-col justify-between gap-2 
+        bg-[#A6E1FA] rounded-lg cursor-pointer
+        transition-transform duration-400 hover:scale-[1.03]
+      "
     >
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+      <div className="flex items-center gap-2">
         {emoji && (
-          <Typography sx={{ fontSize: 22 }} role="img">
+          <span role="img" className="text-[22px]">
             {emoji}
-          </Typography>
+          </span>
         )}
-        <Typography variant="h6" sx={{ fontWeight: "600", fontSize: "18px" }}>
-          {title}
-        </Typography>
-      </Box>
-
-      <Typography
-        variant="body1"
-        sx={{
-          fontSize: "15px",
-          color: "#222",
-          flexGrow: 1,
-          overflow: "hidden",
-          display: "-webkit-box",
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: "vertical",
-        }}
+        <h3 className="font-semibold text-[18px]">{title}</h3>
+      </div>
+      <p
+        className="
+          text-[15px] text-[#222] flex-grow overflow-hidden
+          line-clamp-3
+        "
       >
         {description}
-      </Typography>
+      </p>
 
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        mt={1}
-      >
-        <Typography variant="body2" sx={{ fontWeight: "200" }}>
-          Created on {date}
-        </Typography>
+      <div className="flex justify-between items-center mt-1">
+        <span className="text-sm font-extralight">Created on {date}</span>
         {icon}
-      </Box>
-    </Card>
+      </div>
+    </div>
   );
 }
 

@@ -1,20 +1,13 @@
-import {
-  Box,
-  Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
-import FlashOnIcon from "@mui/icons-material/FlashOn";
+import type { ReactNode } from "react";
+import { BoltIcon } from "@heroicons/react/24/solid"; 
 import Motion from "./Motion";
 
 type SkillCardProps = {
-  IconSkill: React.ReactNode;
+  IconSkill: ReactNode;
   titleSkill: string;
   textSkill: string[];
   ImageSrc: string;
-  imgeRigthOrLif?: boolean; // optional: image on right if true
+  imgeRigthOrLif?: boolean;
 };
 
 function SkillCard({
@@ -25,79 +18,45 @@ function SkillCard({
   imgeRigthOrLif = false,
 }: SkillCardProps) {
   const ImageBox = (
-    <Box
-      sx={{
-        width: { xs: "100%", md: "400px" },
-        textAlign: "center",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <img
-        src={ImageSrc}
-        alt={titleSkill}
-        style={{
-          maxWidth: "100%",
-          borderRadius: "12px",
-        }}
-      />
-    </Box>
+    <div className="w-full md:w-[400px] flex justify-center text-center">
+      <img src={ImageSrc} alt={titleSkill} className="max-w-full rounded-xl" />
+    </div>
   );
 
   const TextBox = (
-    <Box sx={{ maxWidth: 500, textAlign: "left" }}>
-      <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-        <Box sx={{ mr: 1 }}>{IconSkill}</Box>
-        <Typography variant="h6" fontWeight={600}>
-          {titleSkill}
-        </Typography>
-      </Box>
+    <div className="max-w-[500px] text-left">
+      <div className="flex items-center mb-2">
+        <div className="mr-2">{IconSkill}</div>
+        <h3 className="text-lg font-semibold">{titleSkill}</h3>
+      </div>
 
-      <List dense>
+      <ul className="space-y-2">
         {textSkill.map((text, index) => (
-          <ListItem key={index} sx={{ pl: 0 }}>
-            <ListItemIcon sx={{ minWidth: "30px" }}>
-              <FlashOnIcon sx={{ color: "#f5b301" }} />
-            </ListItemIcon>
-            <ListItemText
-              primary={
-                <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                  {text}
-                </Typography>
-              }
-            />
-          </ListItem>
+          <li key={index} className="flex items-start">
+            <span className="w-[30px] flex justify-center mt-[2px]">
+              <BoltIcon className="w-5 h-5 text-yellow-400" />
+            </span>
+            <p className="text-gray-600 text-sm">{text}</p>
+          </li>
         ))}
-      </List>
-    </Box>
+      </ul>
+    </div>
   );
 
   return (
-    <Box
-      sx={{
-        mt: 4,
-        px: 2,
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        gap: 4,
-        flexWrap: "wrap",
-      }}
-    >
+    <div className="mt-8 px-4 flex flex-col md:flex-row justify-center items-center w-full gap-8 flex-wrap">
       {imgeRigthOrLif ? (
         <>
           <Motion xValue={-50}>{TextBox}</Motion>
-          <Motion xValue={50}> {ImageBox}</Motion>
+          <Motion xValue={50}>{ImageBox}</Motion>
         </>
       ) : (
         <>
-          <Motion xValue={-50}> {ImageBox}</Motion>
-          <Motion xValue={50}> {TextBox}</Motion>
+          <Motion xValue={-50}>{ImageBox}</Motion>
+          <Motion xValue={50}>{TextBox}</Motion>
         </>
       )}
-    </Box>
+    </div>
   );
 }
 

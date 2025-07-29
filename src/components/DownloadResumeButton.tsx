@@ -1,30 +1,15 @@
-import Button from "@mui/material/Button";
-import DownloadIcon from "@mui/icons-material/Download";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
 function DownloadResumeButton() {
   return (
-    <Button
-      variant="contained"
-      href="AnasAbuJaber_CV.pdf"
+    <a
+      href="/AnasAbuJaber_CV.pdf"
       download
-      startIcon={<DownloadIcon />}
-      sx={{
-        mt: 3,
-        backgroundColor: "#0d1b2a",
-        color: "#fff",
-        textTransform: "none",
-        fontWeight: 500,
-        fontSize: "1rem",
-        px: 3,
-        py: 1.2,
-        borderRadius: "8px",
-        "&:hover": {
-          backgroundColor: "#08121f",
-        },
-      }}
+      className="mt-3 inline-flex items-center gap-2 rounded-lg bg-[#0d1b2a] px-6 py-3 text-white font-medium text-base no-underline transition-colors duration-200 hover:bg-[#08121f]"
     >
+      <ArrowDownTrayIcon className="w-5 h-5" />
       📄 Download My Resume
-    </Button>
+    </a>
   );
 }
 

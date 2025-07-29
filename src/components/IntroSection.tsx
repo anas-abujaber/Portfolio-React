@@ -1,4 +1,3 @@
-import { Box, Typography } from "@mui/material";
 import gazaSkyGeeks from "../assets/gaza-sky-geeks.webp";
 import university from "../assets/university.png";
 import udemy from "../assets/udemy.png";
@@ -19,75 +18,42 @@ function IntroSection({
   paragraphText,
 }: IntroSectionProp) {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        textAlign: "center",
-        gap: 4,
-        px: 2,
-        py: 4,
-      }}
-    >
-      <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
+    <section className="flex flex-col md:flex-row items-center justify-center w-full text-center gap-6 px-4 py-8">
+      <div className="flex-1 flex justify-center">
         <img
           src={image}
           alt="Education"
-          style={{ maxWidth: "100%", height: "auto", borderRadius: 8 }}
+          className="max-w-full h-auto rounded-lg"
         />
-      </Box>
+      </div>
 
-      <Box sx={{ flex: 1 }}>
-        <Typography variant="h4" fontWeight={800}>
-          {title}
-        </Typography>
+      <div className="flex-1">
+        <h2 className="text-3xl font-extrabold">{title}</h2>
         {subTitle && (
-          <Typography
-            variant="h6"
-            color="text.secondary"
-            sx={{ mt: 1, fontWeight: "500" }}
-          >
-            {subTitle}
-          </Typography>
+          <h3 className="text-lg font-medium text-gray-600 mt-1">{subTitle}</h3>
         )}
-        <Typography
-          variant="h6"
-          style={{ fontSize: "14px", fontWeight: "300" }}
-          color="text.secondary"
-          sx={{ mt: 1 }}
-        >
-          {paragraphText}
-        </Typography>
+        {paragraphText && (
+          <p className="text-sm font-light text-gray-600 mt-2">{paragraphText}</p>
+        )}
+
         {isHaveImage && (
-          <Box
-            mt={3}
-            display="flex"
-            justifyContent="center"
-            gap={3}
-            flexWrap="wrap"
-          >
+          <div className="flex justify-center flex-wrap gap-6 mt-6">
             <a href="https://gazaskygeeks.com/" target="_blank">
-              <img src={gazaSkyGeeks} alt="Gaza Sky Geeks" height={40} />
+              <img src={gazaSkyGeeks} alt="Gaza Sky Geeks" className="h-10" />
             </a>
             <a href="https://www.up.edu.ps" target="_blank">
-              <img src={university} alt="University" height={40} />
+              <img src={university} alt="University" className="h-10" />
             </a>
             <a href="https://www.udemy.com/" target="_blank">
-              <img src={udemy} alt="Udemy" height={40} />
+              <img src={udemy} alt="Udemy" className="h-10" />
             </a>
-            <a
-              href="https://www.cisco.com/site/il/en/index.html"
-              target="_blank"
-            >
-              <img src={Cisco} alt="Cisco" height={40} />
+            <a href="https://www.cisco.com/site/il/en/index.html" target="_blank">
+              <img src={Cisco} alt="Cisco" className="h-10" />
             </a>
-          </Box>
+          </div>
         )}
-      </Box>
-    </Box>
+      </div>
+    </section>
   );
 }
 
