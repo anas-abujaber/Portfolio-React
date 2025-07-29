@@ -9,7 +9,7 @@ function SocialLinks() {
   return (
     <Box sx={{ display: "flex", gap: 1, mt: 4 }}>
       <IconButton
-        href="https://github.com/anasadnan2"
+        href="https://github.com/anas-abujaber"
         target="_blank"
         sx={{ bgcolor: "#000", color: "#fff" }}
       >

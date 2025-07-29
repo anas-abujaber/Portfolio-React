@@ -32,7 +32,7 @@ Follow these instructions to run the project locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/anasadnan2/Portfolio-React.git
+git clone https://github.com/anas-abujaber/Portfolio-React.git
 cd Portfolio-React
 ```
 

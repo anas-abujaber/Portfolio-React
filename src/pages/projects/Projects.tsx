@@ -124,7 +124,9 @@ function Projects() {
       <Box>
         <Button
           variant="contained"
-          onClick={() => window.open("https://github.com/anasadnan2", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/anas-abujaber", "_blank")
+          }
           sx={{
             backgroundColor: "#001E62",
             color: "white",
