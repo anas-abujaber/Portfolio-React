@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import IntroSection from "../../components/IntroSection";
-import Motion from "../../components/Motion";
 import DegreeCard from "../../components/DegreeCard";
 import university from "../../assets/university.png";
 import EducationPhoto from "../../assets/Education.png";
@@ -35,7 +34,6 @@ function Education() {
   ];
 
   return (
-    <Motion yValue={20}>
       <div className="flex flex-col items-center gap-16 px-4">
         <div className="w-full max-w-6xl mx-auto">
           <IntroSection
@@ -99,7 +97,6 @@ function Education() {
           </div>
         </div>
       </div>
-    </Motion>
   );
 }
 

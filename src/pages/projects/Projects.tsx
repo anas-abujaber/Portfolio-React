@@ -1,5 +1,4 @@
 import IntroSection from "../../components/IntroSection";
-import Motion from "../../components/Motion";
 import ProjectPhoto from "../../assets/project.png";
 import CardList from "../../components/CardList";
 import typeScript from "../../assets/typescript-original.svg";
@@ -10,7 +9,6 @@ import html5 from "../../assets/html5-original.svg";
 
 function Projects() {
   return (
-    <Motion yValue={20}>
       <div className="flex flex-col gap-12 items-center px-4">
         <div className="max-w-6xl w-full mx-auto">
           <IntroSection
@@ -117,7 +115,6 @@ function Projects() {
           </button>
         </div>
       </div>
-    </Motion>
   );
 }
 

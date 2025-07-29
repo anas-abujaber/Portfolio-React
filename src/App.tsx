@@ -12,12 +12,14 @@ function App() {
       <Motion yValue={-20}>
         <Navbar />
       </Motion>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/education" element={<Education />} />
-      </Routes>
+      <Motion yValue={20}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/education" element={<Education />} />
+        </Routes>
+      </Motion>
     </>
   );
 }
