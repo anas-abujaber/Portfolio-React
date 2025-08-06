@@ -27,13 +27,19 @@ function IntroSection({
         />
       </div>
 
-      <div className="flex-1">
-        <h2 className="text-3xl font-extrabold">{title}</h2>
+      <div className="flex-1 text-center md:text-left">
+        <h2 className="text-xl md:text-2xl font-bold leading-tight">{title}</h2>
+
         {subTitle && (
-          <h3 className="text-lg font-medium text-gray-600 mt-1">{subTitle}</h3>
+          <h3 className="text-sm md:text-base font-medium text-gray-600 mt-1 leading-snug">
+            {subTitle}
+          </h3>
         )}
+
         {paragraphText && (
-          <p className="text-sm font-light text-gray-600 mt-2">{paragraphText}</p>
+          <p className="text-xs md:text-sm font-light text-gray-600 mt-3 leading-relaxed">
+            {paragraphText}
+          </p>
         )}
 
         {isHaveImage && (
@@ -47,7 +53,10 @@ function IntroSection({
             <a href="https://www.udemy.com/" target="_blank">
               <img src={udemy} alt="Udemy" className="h-10" />
             </a>
-            <a href="https://www.cisco.com/site/il/en/index.html" target="_blank">
+            <a
+              href="https://www.cisco.com/site/il/en/index.html"
+              target="_blank"
+            >
               <img src={Cisco} alt="Cisco" className="h-10" />
             </a>
           </div>

@@ -10,11 +10,10 @@ function CardList({ title, description, date, icon, emoji }: CardListProps) {
   return (
     <div
       className="
-        w-[400px] h-[150px] p-6 shadow-md overflow-hidden 
-        flex flex-col justify-between gap-2 
-        bg-[#A6E1FA] rounded-lg cursor-pointer
-        transition-transform duration-400 hover:scale-[1.03]
-      "
+    w-full max-w-[400px] h-auto min-h-[150px] p-6 shadow-md overflow-hidden 
+    flex flex-col justify-between gap-2 
+    bg-[#A6E1FA] rounded-lg cursor-pointer
+    transition-transform duration-400 hover:scale-[1.03] "
     >
       <div className="flex items-center gap-2">
         {emoji && (
