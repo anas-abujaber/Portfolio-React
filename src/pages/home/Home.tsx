@@ -35,7 +35,7 @@ function Home() {
             ]}
           />
           <SkillCard
-            imgeRigthOrLif
+            imageRight
             ImageSrc={UiUx}
             IconSkill={<FaDrawPolygon className="text-blue-600 text-4xl" />}
             titleSkill="UI/UX Design"
@@ -56,7 +56,7 @@ function Home() {
             ]}
           />
           <SkillCard
-            imgeRigthOrLif
+            imageRight
             ImageSrc={VCCphoto}
             IconSkill={<FaGithub className="text-blue-600 text-4xl" />}
             titleSkill="Version Control & Collaboration"

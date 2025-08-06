@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { BoltIcon } from "@heroicons/react/24/solid"; 
+import { BoltIcon } from "@heroicons/react/24/solid";
 import Motion from "./Motion";
 
 type SkillCardProps = {
@@ -7,7 +7,7 @@ type SkillCardProps = {
   titleSkill: string;
   textSkill: string[];
   ImageSrc: string;
-  imgeRigthOrLif?: boolean;
+  imageRight?: boolean;
 };
 
 function SkillCard({
@@ -15,16 +15,15 @@ function SkillCard({
   titleSkill,
   textSkill,
   ImageSrc,
-  imgeRigthOrLif = false,
+  imageRight = false,
 }: SkillCardProps) {
   const ImageBox = (
-    <div className="w-full md:w-[400px] flex justify-center text-center">
-      <img src={ImageSrc} alt={titleSkill} className="max-w-full rounded-xl" />
+    <div className="w-full md:max-w-md flex justify-center text-center">
+      <img src={ImageSrc} alt={titleSkill} className="w-full rounded-xl" />
     </div>
   );
-
   const TextBox = (
-    <div className="max-w-[500px] text-left">
+    <div className="md:max-w-md  text-left">
       <div className="flex items-center mb-2">
         <div className="mr-2">{IconSkill}</div>
         <h3 className="text-lg font-semibold">{titleSkill}</h3>
@@ -44,8 +43,8 @@ function SkillCard({
   );
 
   return (
-    <div className="mt-8 px-4 flex flex-col md:flex-row justify-center items-center w-full gap-8 flex-wrap">
-      {imgeRigthOrLif ? (
+    <div className="mb-8 p-4 flex flex-col md:flex-row justify-center items-center w-full gap-10">
+      {imageRight ? (
         <>
           <Motion xValue={-50}>{TextBox}</Motion>
           <Motion xValue={50}>{ImageBox}</Motion>
