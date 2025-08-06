@@ -29,37 +29,40 @@ function Contact() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10 flex flex-col gap-8">
-      <h2 className="text-3xl font-bold">Let's Get in Touch ✉️</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-left">
+        Let's Get in Touch ✉️
+      </h2>
 
-      <p className="text-gray-700 max-w-xl leading-relaxed">
+      <p className="text-sm md:text-base text-gray-700 max-w-xl leading-relaxed text-left">
         👋 Whether you're looking to collaborate, have a question, or just want
-        to say hello — I'd love to hear from you!
-        <br />
+        to say hello — I'd love to hear from you! <br />
         Reach out via social media or drop a message directly through the form
         below.
       </p>
 
-      <SocialLinks />
+      <div className="flex justify-start">
+        <SocialLinks />
+      </div>
 
       <form onSubmit={handleSubmit} className="max-w-xl space-y-4">
         <input
           type="email"
           placeholder="Your Email"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full text-sm md:text-base border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           placeholder="Your Message"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2 min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full text-sm md:text-base border border-gray-300 rounded-lg px-4 py-2 min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-600"
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
         <button
           type="submit"
-          className="bg-[#001E62] hover:bg-[#00184F] text-white font-medium px-6 py-2 rounded-lg transition-colors"
+          className="bg-[#001E62] hover:bg-[#00184F] text-white font-medium px-6 py-2 rounded-lg transition-colors text-sm md:text-base"
         >
           Send Message
         </button>
@@ -68,20 +71,22 @@ function Contact() {
       {openDialog && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6">
-            <h3 className="text-lg font-semibold mb-4">Confirm Send</h3>
-            <p className="mb-6">
+            <h3 className="text-base md:text-lg font-semibold mb-4">
+              Confirm Send
+            </h3>
+            <p className="text-sm md:text-base mb-6">
               Are you sure you want to send this message to Anas?
             </p>
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setOpenDialog(false)}
-                className="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition"
+                className="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition text-sm md:text-base"
               >
                 Cancel
               </button>
               <button
                 onClick={handleSendEmail}
-                className="px-4 py-2 rounded-lg bg-[#001E62] hover:bg-[#00184F] text-white transition"
+                className="px-4 py-2 rounded-lg bg-[#001E62] hover:bg-[#00184F] text-white transition text-sm md:text-base"
               >
                 Yes, Send it
               </button>
