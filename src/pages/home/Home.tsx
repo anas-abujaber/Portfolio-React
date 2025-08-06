@@ -2,10 +2,10 @@ import HeroSection from "../../components/HeroSection";
 import SkillCard from "../../components/SkillCard";
 
 import FrontendDevelopment from "../../assets/FrontendDevelopment.webp";
-import UiUx from "../../assets/UI-UX-Design.png";
-import Java from "../../assets/java-developer.png";
-import VCCphoto from "../../assets/version_control_scriberia.png";
-import ResponsiveWDphoto from "../../assets/future-of-responsive-web-design.png";
+import UiUx from "../../assets/UI-UX-Design.webp";
+import Java from "../../assets/java-developer.webp";
+import VCCphoto from "../../assets/version_control_scriberia.webp";
+import ResponsiveWDphoto from "../../assets/future-of-responsive-web-design.webp";
 
 import {
   FaCode,

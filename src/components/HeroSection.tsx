@@ -1,4 +1,4 @@
-import anasPhoto from "../assets/anasPhoto.png";
+import anasPhoto from "../assets/anas-photo.webp";
 import SocialLinks from "./SocialLinks";
 import DownloadResumeButton from "./DownloadResumeButton";
 

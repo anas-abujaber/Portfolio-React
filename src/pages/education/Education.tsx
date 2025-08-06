@@ -1,13 +1,13 @@
 import { Typography } from "@mui/material";
 import IntroSection from "../../components/IntroSection";
 import DegreeCard from "../../components/DegreeCard";
-import university from "../../assets/university.png";
-import EducationPhoto from "../../assets/Education.png";
-import Coat from "../../assets/Coat_of_arms_of_Palestine.png";
-import CiscoCert from "../../assets/Cybersecurity.png";
-import uiux from "../../assets/uiux.png";
-import Vulnerability from "../../assets/Vulnerability.png";
-import Java from "../../assets/Java.png";
+import university from "../../assets/university.webp";
+import EducationPhoto from "../../assets/Education.webp";
+import Coat from "../../assets/Coat_of_arms_of_Palestine.webp";
+import CiscoCert from "../../assets/Cybersecurity.webp";
+import uiux from "../../assets/uiux.webp";
+import Vulnerability from "../../assets/Vulnerability.webp";
+import Java from "../../assets/Java.webp";
 import CertificationCard from "../../components/CertificationCard";
 function Education() {
   const certificates = [

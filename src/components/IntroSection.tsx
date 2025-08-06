@@ -1,7 +1,7 @@
 import gazaSkyGeeks from "../assets/gaza-sky-geeks.webp";
-import university from "../assets/university.png";
-import udemy from "../assets/udemy.png";
-import Cisco from "../assets/Cisco.png";
+import university from "../assets/university.webp";
+import udemy from "../assets/udemy.webp";
+import Cisco from "../assets/Cisco.webp";
 
 type IntroSectionProp = {
   title: string;

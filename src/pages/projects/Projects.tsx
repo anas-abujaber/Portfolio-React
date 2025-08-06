@@ -1,5 +1,5 @@
 import IntroSection from "../../components/IntroSection";
-import ProjectPhoto from "../../assets/project.png";
+import ProjectPhoto from "../../assets/project.webp";
 import CardList from "../../components/CardList";
 import typeScript from "../../assets/typescript-original.svg";
 import javaScript from "../../assets/javascript.svg";
