@@ -1,4 +1,4 @@
-import anasPhoto from "../assets/anas-photo.webp";
+import anasPhoto from "../assets/anas.webp";
 import SocialLinks from "./SocialLinks";
 import DownloadResumeButton from "./DownloadResumeButton";
 
@@ -36,11 +36,11 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="hidden md:flex flex-[2] justify-center">
+        <div className="hidden md:flex flex-[2] justify-center ">
           <img
             src={anasPhoto}
             alt="Anas Abu Jaber"
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-xl"
+            className="h-[500px] w-auto rounded-xl object-cover"
           />
         </div>
       </div>
