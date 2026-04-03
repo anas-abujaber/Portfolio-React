@@ -20,6 +20,99 @@ function Projects() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         <CardList
+          emoji="💰"
+          title="Personal Finance & Bill Splitter"
+          description="A comprehensive Next.js 16 dashboard for managing personal finances, tracking expenses with AI-powered insights, and splitting bills among groups."
+          date="2026-03-15"
+          icon={
+            <div className="flex gap-2">
+              <img
+                src={react}
+                alt="Next.js"
+                width={24}
+                height={24}
+                title="Next.js / React 19"
+              />
+              <img
+                src={typeScript}
+                alt="TypeScript"
+                width={24}
+                height={24}
+                title="TypeScript"
+              />
+              <img
+                src={html5}
+                alt="Tailwind"
+                width={24}
+                height={24}
+                title="Tailwind CSS"
+              />
+            </div>
+          }
+        />
+        <CardList
+          emoji="🏧"
+          title="Smart ATM - Digital Wallet"
+          description="A modern electronic wallet simulation featuring secure login, transaction tracking, real-time currency watchlist, and optimized performance using Code Splitting."
+          date="2025-11-20"
+          icon={
+            <div className="flex gap-2">
+              <img
+                src={react}
+                alt="React"
+                width={24}
+                height={24}
+                title="React + Context API"
+              />
+              <img
+                src={javaScript}
+                alt="JavaScript"
+                width={24}
+                height={24}
+                title="JavaScript"
+              />
+              <img
+                src={html5}
+                alt="Tailwind"
+                width={24}
+                height={24}
+                title="Tailwind CSS"
+              />
+            </div>
+          }
+        />
+        <CardList
+          emoji="🕌"
+          title="Prayer Times Web App"
+          description="A high-performance prayer time tracker using Aladhan API, featuring dynamic cascading selects (Continent > Country > City) with advanced caching and a live HH:MM:SS countdown."
+          date="2025-10-15"
+          icon={
+            <div className="flex gap-2">
+              <img
+                src={javaScript}
+                alt="JavaScript"
+                width={24}
+                height={24}
+                title="ES6 Modules"
+              />
+              <img
+                src={html5}
+                alt="HTML5"
+                width={24}
+                height={24}
+                title="Semantic HTML"
+              />
+              <img
+                src={css3}
+                alt="CSS3"
+                width={24}
+                height={24}
+                title="Responsive Design"
+              />
+            </div>
+          }
+        />
+        <CardList
           emoji="🛍️"
           title="Modern Ecommerce Store"
           description="A responsive ecommerce store built with React, TypeScript, MUI, and Context API."
